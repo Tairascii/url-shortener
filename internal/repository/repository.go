@@ -12,14 +12,14 @@ var (
 
 type Repo struct {
 	db           *pgxpool.Pool
-	datacenterID int64
-	nodeID       int64
+	datacenterID uint8
+	shardID      uint8
 }
 
-func New(db *pgxpool.Pool, datacenterID, nodeID int64) *Repo {
+func New(db *pgxpool.Pool, datacenterID, shardID uint8) *Repo {
 	return &Repo{
 		db:           db,
 		datacenterID: datacenterID,
-		nodeID:       nodeID,
+		shardID:      shardID,
 	}
 }

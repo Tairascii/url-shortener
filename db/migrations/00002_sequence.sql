@@ -1,6 +1,6 @@
 -- +goose Up
 -- +goose StatementBegin
-create sequence url_id_manual_seq increment 1000 start 1000;
+create sequence url_id_manual_seq increment 10000 start 10000;
 -- +goose StatementEnd
 
 -- +goose Down
